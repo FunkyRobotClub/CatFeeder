@@ -1,17 +1,19 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BCM)
 
-AIN1 = 18
-AIN2 = 23
-BIN1 = 24
-BIN2 = 25
+def init():
+    GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(AIN1, GPIO.OUT)
-GPIO.setup(AIN2, GPIO.OUT)
-GPIO.setup(BIN1, GPIO.OUT)
-GPIO.setup(BIN2, GPIO.OUT)
+    AIN1 = 18
+    AIN2 = 23
+    BIN1 = 24
+    BIN2 = 25
+
+    GPIO.setup(AIN1, GPIO.OUT)
+    GPIO.setup(AIN2, GPIO.OUT)
+    GPIO.setup(BIN1, GPIO.OUT)
+    GPIO.setup(BIN2, GPIO.OUT)
 
 
 def forward(delay, steps):
@@ -36,6 +38,10 @@ def backwards(delay, steps):
         time.sleep(delay)
         setStep(1, 0, 1, 0)
         time.sleep(delay)
+
+
+def stop():
+    setStep(0, 0, 0, 0)
 
 
 def setStep(w1, w2, w3, w4):
