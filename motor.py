@@ -1,14 +1,14 @@
 import RPi.GPIO as GPIO
 import timer
 
+AIN1 = 18
+AIN2 = 23
+BIN1 = 24
+BIN2 = 25
+
 
 def init():
     GPIO.setmode(GPIO.BCM)
-
-    AIN1 = 18
-    AIN2 = 23
-    BIN1 = 24
-    BIN2 = 25
 
     GPIO.setup(AIN1, GPIO.OUT)
     GPIO.setup(AIN2, GPIO.OUT)
