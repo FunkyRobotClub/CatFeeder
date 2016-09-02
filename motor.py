@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import timer
+import time
 
 AIN1 = 18
 AIN2 = 23
@@ -19,25 +19,25 @@ def init():
 def forward(delay, steps):
     for i in range(0, steps):
         setStep(1, 0, 1, 0)
-        timer.sleep(delay)
+        time.sleep(delay)
         setStep(0, 1, 1, 0)
-        timer.sleep(delay)
+        time.sleep(delay)
         setStep(0, 1, 0, 1)
-        timer.sleep(delay)
+        time.sleep(delay)
         setStep(1, 0, 0, 1)
-        timer.sleep(delay)
+        time.sleep(delay)
 
 
 def backwards(delay, steps):
     for i in range(0, steps):
         setStep(1, 0, 0, 1)
-        timer.sleep(delay)
+        time.sleep(delay)
         setStep(0, 1, 0, 1)
-        timer.sleep(delay)
+        time.sleep(delay)
         setStep(0, 1, 1, 0)
-        timer.sleep(delay)
+        time.sleep(delay)
         setStep(1, 0, 1, 0)
-        timer.sleep(delay)
+        time.sleep(delay)
 
 
 def stop():
