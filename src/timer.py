@@ -24,7 +24,10 @@ def nextAlarm():
             print(turnTime + " has already passed")
         elif toSeconds(turnTime) < smallest:
             smallest = toSeconds(turnTime)
-    return smallest
+    if smallest == 86400:
+        return smallest + toSeconds(turnTimes[0])
+    else:
+        return smallest
 
 
 def sleepRemainingTime():
