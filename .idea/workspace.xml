@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb3bb51a-eec4-449c-a681-108da32af604" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataLogger.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/log.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cats.py" afterPath="$PROJECT_DIR$/src/cats.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/timer.py" afterPath="$PROJECT_DIR$/src/timer.py" />
     </list>
     <ignored path="Cat Feeder.iws" />
     <ignored path=".idea/workspace.xml" />
