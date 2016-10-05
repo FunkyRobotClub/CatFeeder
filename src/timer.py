@@ -5,34 +5,39 @@ sysTime = ""
 turnTimes = ["09:00:00", "15:10:00"]
 
 
-def setTime():
+def set_time():
     global sysTime
     sysTime = str(dt.time(dt.now()))[:8]
 
 
-def toSeconds(hms):
+def get_date():
+    set_time()
+    return str(dt.date(dt.now()))
+
+
+def to_seconds(hms):
     # Turns HH:MM:SS into seconds
     s = hms.split(':')
     return (int(s[0])*3600)+(int(s[1])*60)+(int(s[2]))
 
 
-def nextAlarm():
+def next_alarm():
     global sysTime
     smallest = 86400
     for turnTime in turnTimes:
-        if toSeconds(turnTime) < toSeconds(sysTime):
+        if to_seconds(turnTime) < to_seconds(sysTime):
             print(turnTime + " has already passed")
-        elif toSeconds(turnTime) < smallest:
-            smallest = toSeconds(turnTime)
+        elif to_seconds(turnTime) < smallest:
+            smallest = to_seconds(turnTime)
     if smallest == 86400:
-        return smallest + toSeconds(turnTimes[0])
+        return smallest + to_seconds(turnTimes[0])
     else:
         return smallest
 
 
-def sleepRemainingTime():
-    setTime()
+def sleep_remaining_time():
+    set_time()
     global sysTime
-    print("Waiting for " + str(nextAlarm() - toSeconds(sysTime)) + " seconds")
-    time.sleep(nextAlarm() - toSeconds(sysTime))
+    print("Waiting for " + str(next_alarm() - to_seconds(sysTime)) + " seconds")
+    time.sleep(next_alarm() - to_seconds(sysTime))
     print("Done!")
