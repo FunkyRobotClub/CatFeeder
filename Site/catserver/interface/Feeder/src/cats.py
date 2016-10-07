@@ -1,7 +1,7 @@
-import src.DataLogger as DataLogger
-import src.motor as motor
+from . import DataLogger
+from . import motor
 
-import Feeder.src.timer as timer
+import Site.catserver.interface.Feeder.src.timer as timer
 
 motor.init()
 
