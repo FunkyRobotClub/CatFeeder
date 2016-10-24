@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bowl Data</title>
+</head>
+<body>
+    {% block content %}
+        {% for info in data %}
+            <p>{{info}}</p>
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>
