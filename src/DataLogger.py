@@ -1,4 +1,4 @@
-import src.timer as timer
+import timer
 import csv
 
 
