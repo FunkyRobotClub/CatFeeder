@@ -2,7 +2,7 @@ from datetime import datetime as dt
 import time
 
 sysTime = ""
-turnTimes = ["09:00:00", "15:10:00"]
+turnTimes = ["09:00:00", "19:40:00"]
 
 
 def set_time():
