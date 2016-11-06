@@ -1,4 +1,4 @@
-import timer
+from . import timer
 import csv
 
 

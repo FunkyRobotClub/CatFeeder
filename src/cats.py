@@ -1,6 +1,5 @@
-import timer
-import motor
-import DataLogger
+from . import timer
+from . import motor
 
 motor.init()
 
