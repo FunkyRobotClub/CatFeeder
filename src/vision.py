@@ -14,8 +14,10 @@ image = cv2.imdecode(buff, 1)
 
 retval, dst = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY)
 
+dst = cv2.cvtColor(dst, cv2.BGR2GRAY)
+
 contours = cv2.findContours(dst, mode=cv2.RETR_LIST, method=cv2.CHAIN_APPROX_NONE)
 
-cv2.drawContours(dst, contours, -1, (0,0,255))
+cv2.drawContours(dst, contours, -1, (0, 0, 255))
 
 cv2.imwrite('threshed.jpg', dst)
