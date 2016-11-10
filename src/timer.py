@@ -30,7 +30,7 @@ def next_alarm():
         elif to_seconds(turnTime) < smallest:
             smallest = to_seconds(turnTime)
     if smallest == 86400:
-        return smallest + to_seconds(turnTimes[0])
+        return smallest + turnTimes[0]
     else:
         return smallest
 
